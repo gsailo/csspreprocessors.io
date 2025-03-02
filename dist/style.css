@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   padding-top: 60px;
   padding-bottom: 40px;
+  background-color: #C4BFC0;
 }
 .nav {
   background-color: #DAAA00;
@@ -17,13 +18,12 @@ body {
   z-index: 1000;
 }
 .footer {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   position: fixed;
-  bottom: 0;
+  bottom: 30px;
   left: 0;
   width: 100%;
-  height: 40px;
-  line-height: 40px;
+  padding: 20px 0;
   text-align: center;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
