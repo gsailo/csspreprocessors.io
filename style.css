@@ -29,8 +29,11 @@ body {
   z-index: 1000;
 }
 .box-container {
-  text-align: center;
-  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .red-box {
   background-color: red;

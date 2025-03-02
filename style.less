@@ -56,8 +56,11 @@ body {
 
 // Container for the boxes
 .box-container {
-    text-align: center;
-    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: row wrap;
+    justify-content: space-around;
+    align-items: center;
 }
   
 // Apply the mixin to create individual box classes
