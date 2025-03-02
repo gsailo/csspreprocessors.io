@@ -1,0 +1,81 @@
+// Global Variables
+@navBg: #DAAA00;
+@footerBg: #ffffff;
+@boxBorderRadius: 8px;
+@boxBorder: 2px solid black;
+@boxContainerBg: #C4BFC0;
+
+// Box sizes for each colored box
+@sizeRed: 100px;
+@sizeBlue: 200px;
+@sizeGreen: 250px;
+@sizePurple: 50px;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-color: @boxContainerBg;
+}
+
+.nav {
+    background-color: @navBg;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.footer {
+    background-color: @footerBg;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+// Mixin to generate a box with the given color and size
+.box(@color, @size) {
+    background-color: @color;
+    width: @size;
+    height: @size;
+    border-radius: @boxBorderRadius;
+    border: @boxBorder;
+    display: inline-block;
+    margin: 10px;
+}
+
+// Container for the boxes
+.box-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+// Apply the mixin to create individual box classes
+.red-box {
+    .box(red, @sizeRed);
+}
+  
+.blue-box {
+    .box(blue, @sizeBlue);
+}
+  
+.green-box {
+    .box(green, @sizeGreen);
+}
+  
+.purple-box {
+    .box(purple, @sizePurple);
+}
